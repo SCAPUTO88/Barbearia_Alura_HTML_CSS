@@ -1,0 +1,78 @@
+Como reestruturar o nosso código, removendo os CSS inline e colocando-os no arquivo CSS externo
+Como criar um identificador para marcar especificamente um elemento
+Como fazer referência a esse identificador no CSS
+Como adicionar uma imagem à nossa página
+Como ajustar a altura do elemento, através da propriedade height
+Como ajustar a largura do elemento, através da propriedade width
+Como ajustar o espaçamento interno do elemento, através da propriedade padding
+Como ajustar o espaçamento externo do elemento, através da propriedade margin
+Como se comporta um time de front-end hoje em dia
+id #
+class .
+
+https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element
+
+Forma de display - exibiçao 
+In line - Conteudo da tag é do tamanho do conteudo que esta la, a img tera a largura e altura daquela img
+Block - tamanho sempre 100%
+
+
+
+<head - titulos
+<h1 ate h6>
+<p> paragrafo - tag de texto.
+<a> tag de link - linkagem entre paginas, internas ou externas. possui atributos href
+<img> tag de imagem - src e alt (se a img estiver quebrada, ela vai colocar um texto de apoio)
+<ul> pin, traço <li> para cada item
+<ol> 1 2 3 etc
+<dl> hierarquia, identada
+<header> cabeçalho - primeira informaçao a ser apresentada
+<nav> conjunto de links
+<footer> rodape
+<main> conteudo principal do site
+<article> utilizada quando temos um bloco de conteudo com um sentido - noticia, artigo, começo meio e fim
+<section> divisor de conteudo - varios boxes
+
+:hover :active :visited :required
+
+Com o position: absolute, eu consigo posicionar meu elemento em qualquer lugar da página.
+
+margin segue a sequencia - 0 0 0 0 (cima direita baixo esquerda)
+
+.itens: first-child/last-child/nth-child(x)/nth-child(2n) <-apenas numeros pares da lista
+.titulo-principal:first-letter {
+	font-style: bold
+}
+
+p:first-line {
+	font-style: italic
+}
+
+.titulo-principal: before {
+	content: "["
+}
+
+.titulo-principal: after {
+	content: "]"
+}
+
+selecionar apenas um paragrafo dentro da main, por exemplo. Usamos o sinal de >  Se colocarmos main p direto, todos os p's, inclusive os "netos" serao selecionados
+
+main > p {
+	background: red;
+}
+
+Selecionar apenas o paragrafo que vem depois da img
+img + p {
+	background: blue
+}
+
+Selecionar todos os paragrafos que vem depois das imgs
+img ~ p {
+	background: green;
+}
+
+selecionar todos os paragrafos exceto um
+.principal p:not(#missao) {
+	background: orange;
+}
